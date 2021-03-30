@@ -1,0 +1,44 @@
+@function size($value){
+    @return $value * $unit;
+}
+@mixin  reset-pm {
+   padding: 0px; 
+   margin: 0px;
+}
+@mixin  transition {
+   transition:  all 300ms;
+}
+.row{
+    display: flex;
+    align-items: center;
+    .col{
+        width: 50%;
+    }
+    .col-30{
+        width: 30%;
+    }
+    .col-70{
+        width: 70%;
+        text-align: center;
+    }
+}
+@for $i from 1 to $limit {
+    .m-#{$i}{
+        margin: $i * $unit;
+    }
+}
+@for $i from 1 to $limit {
+    .p-#{$i}{
+        padding: $i * $unit;
+    }
+}
+@for $i from 1 to $limit {
+    .py-#{$i}{
+        padding-top: $i * $unit 0px;
+    }
+}
+@for $i from 1 to 4 {
+    .w-#{$i}{
+        width: $i * 25%;
+    }
+}
